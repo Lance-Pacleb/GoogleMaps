@@ -13,7 +13,7 @@ body {
     z-index: 100;
     font-size: 88px;
     font-weight: bold;
-    color: #333;
+    color: black;
     text-transform: uppercase;
     top: 100px;
     left: 100px;
@@ -24,9 +24,9 @@ body {
     z-index: 100;
     top: 230px;
     left: 100px;
-    width: 400px;
+    width: 460px;
     height: 60px;
-    background-color:#454E53 ;
+    background-color:orange ;
     display: flex;
 }
 .search-container .search {
@@ -51,78 +51,104 @@ body {
     color: white;
 }
 .stores-list-container {
-    width: 400px;
+    width: 460px;
     position: absolute;
     z-index: 100;
-    background: white;
+    background: #181818ad;
     left: 100px;
     top: 320px;
     border-radius: 30px;
     bottom: 20px;
+    letter-spacing: 3.1px;
+    display: flex;
+    overflow-y: hidden;
+    padding-bottom: 20px;
 }
-
+.store-container{
+    border-bottom: 3px solid orange;
+    display: flex;
+}
+.stores-list{
+    overflow-y: scroll;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.store-container:hover{
+    background-color: #454e53;
+    border-radius: 20px;
+}
 .store-address{
-    font-family: sans-serif;
-    text-transform: capitalize;
-    font-size: 20px;
-    margin: 30px 30px 0px 30px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    font-size: 21px;
+    margin: 30px 30px 0px 0px;
+    color: white;
+}
+.store-address span{
+    display: block;
+    font-size: 21px;
 }
 .store-phone-number{
-    margin: 10px 30px 0px 30px;
-    font-size: 22px;
-    letter-spacing: 2.1px;
+    margin: 15px 0px 0px 0px;
+    font-size: 19px;
+    color: white;
 }
-hr.line {
-  border: 1px solid orange;
+.store-number-container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
-
-.circle{
+.store-number{
     width: 30px;
     height: 30px;
+    display: flex;
+    font-size: 20px;
     border-radius: 50%;
-    background: #34343a;
-    position: absolute;
-    transform-origin: right;
-    top: 60px;
-    left: 16em;
-    text-align: center;
-    color: wheat;
+    background: #ffffffd1;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
 }
-.circle2{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: #34343a;
-    position: absolute;
-    transform-origin: right;
-    top: 184px;
-    left: 16em;
-    text-align: center;
-    color: wheat;
+.store-info-container{
+    flex-grow: 1;
 }
-.circle3{
+.store-info-window{
+    min-width: 300px;
+    font-size: 18px;
+    padding: 8px;
+}
+.store-info-name{
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.store-info-status{
+    margin-top: 6px;
+    border-bottom: 2px solid orange;
+    padding-bottom: 6px;
+}
+.store-info-address, .store-info-phone{
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+.store-info-address .circle, .store-info-phone .circle{
     width: 30px;
     height: 30px;
+    background-color:orange;
+    color:white;
     border-radius: 50%;
-    background: #34343a;
-    position: absolute;
-    transform-origin: right;
-    top: 312px;
-    left: 16em;
-    text-align: center;
-    color: wheat;
-}    
-.circle4{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: #34343a;
-    position: absolute;
-    transform-origin: right;
-    top: 432px;
-    left: 16em;
-    text-align: center;
-    color: wheat;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-right: 8px;
+}
+.not-found-store-container{
+    display: flex;
+    width: 400px;
+    height: 34em;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    overflow-y: none;
+    margin-top: 15px;
 }
