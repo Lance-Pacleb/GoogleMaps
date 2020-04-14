@@ -5,6 +5,7 @@ window.onload = () => {
 var map;
 var markers = [];
 var infoWindow;
+var DataForCovidCaces;
 
 async function initMap() {
     //data's
