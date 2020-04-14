@@ -1,41 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Google Map Store Locator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="image/corona1.png" rel="shortcut icon" /><!-- Favicon -->
+    <title> Covid-19 MAP TRACER</title>
     <script src="js/index.js"></script>
-    <script src="js/image.js"></script>
-    <script type="text/javascript" src="js/store-data.js"></script>
-    <link rel="stylesheet" href="style/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <div class="title">Store Locator</div>
+    <div class="title"><i class="fas fa-head-side-mask"></i>
+Covid-19 MAP TRACER</div>
     <div class="search-container">
         <div class="search">
-            <input id="zip-code-input" type="text" placeholder="Enter Postal Code" />
-            <i class="fas fa-search" onclick="searchStores()"></i>
+            <input type="text" name="" id="country-input" placeholder="Enter Country Name" onchange="searchCountry()" />
         </div>
     </div>
     <div class="stores-list-container">
         <div class="stores-list">
-            <!--Data is from index.js-->
         </div>
-
     </div>
     <div id="map"></div>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzPDbv640Zjh_6hH0_sDStPPK9qgMn0tg&callback=initMap">
-        </script>
-        
-        <!--AIzaSyCcwazb-T7zvceyA4VLWVB-eXvwj-XEUIA clever  apikey--> 
-        <!--<script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLEW4S3JwYwrXkqQPc26o76hb7cRbO0Hs&callback=initMap">
-        </script>
-  https://ccp-virus-record.imfast.io/?fbclid=IwAR0JwEZL5wIL0MNRZYvwGzOhYJce5Vvl2FUpkF4e1wJY6lJP60SjoS-CZyc
-    <script>
-        var audio = document.getElementById("my_song");
-        audio.volume = 0.08;
-    </script>-->
+    </script>
 </body>
-
+<!--Develop by pacleb-->
 </html>
