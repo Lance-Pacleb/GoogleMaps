@@ -1,562 +1,172 @@
- /*var styledMapType = new google.maps.StyledMapType(
-            [
-  {
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#212121"
-      }
-    ]
-  },
-  {
-    "elementType": "labels.icon",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#757575"
-      }
-    ]
-  },
-  {
-    "elementType": "labels.text.stroke",
-    "stylers": [
-      {
-        "color": "#212121"
-      }
-    ]
-  },
-  {
-    "featureType": "administrative",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#757575"
-      }
-    ]
-  },
-  {
-    "featureType": "administrative.country",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#9e9e9e"
-      }
-    ]
-  },
-  {
-    "featureType": "administrative.locality",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#bdbdbd"
-      }
-    ]
-  },
-  {
-    "featureType": "poi",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#757575"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.business",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#181818"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "labels.text",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#616161"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "labels.text.stroke",
-    "stylers": [
-      {
-        "color": "#1b1b1b"
-      }
-    ]
-  },
-  {
-    "featureType": "road",
-    "elementType": "geometry.fill",
-    "stylers": [
-      {
-        "color": "#2c2c2c"
-      }
-    ]
-  },
-  {
-    "featureType": "road",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#8a8a8a"
-      }
-    ]
-  },
-  {
-    "featureType": "road.arterial",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "road.arterial",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#373737"
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#3c3c3c"
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway",
-    "elementType": "labels",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway.controlled_access",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#4e4e4e"
-      }
-    ]
-  },
-  {
-    "featureType": "road.local",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "road.local",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#616161"
-      }
-    ]
-  },
-  {
-    "featureType": "transit",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#757575"
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#000000"
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#3d3d3d"
-      }
-    ]
-  }
-],
-{name: 'Styled Map'});
-*/
- /*
-map.mapTypes.set('styled_map', styledMapType);
-map.setMapTypeId('styled_map');
-
-
- var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">LosAngeles</h1>'+
-      '<div id="bodyContent">'+
-      '<p></p>'+
-      '</div>'+
-      '</div>';
-
-      //image
-
-
-    var iconBase ='imagesmarker/';
-
-    var icons = {
-          parking: {
-            icon: iconBase + 'food.png'
-          },
-          library: {
-            icon: iconBase + 'seven.png'
-          },
-          info: {
-            icon: iconBase + 'food1.png'
-          }
-        };
-
-    var features = [
-          {
-            type: 'info'
-          }, {
-            type: 'parking'
-          }, {
-            type: 'info'
-          }, {
-            type: 'library'
-          }, {
-            type: 'info'
-          }, {
-            type: 'info'
-          }, {
-            type: 'library'
-          }, {
-            type: 'info'
-          }, {
-            type: 'parking'
-          }, {
-            type: 'info'
-          }, {
-            type: 'info'
-          }, {
-            type: 'parking'
-          }, {
-            type: 'library'
-          }, {
-            type: 'parking'
-          }, {
-            type: 'info'
-          }, {
-            type: 'library'
-          }, {
-            type: 'parking'
-          }, {
-            type: 'library'
-          }, {
-            type: 'library'
-          }, {
-            type: 'info'
-          }, {
-            type: 'library'
-          }, {
-            type: 'info'
-          }, {
-            type: 'library'
-          }, {
-            type: 'info'
-          }, {
-            type: 'info'
-          }, {
-            type: 'library'
-          }, {
-            type: 'info'
-          }, {
-            type: 'info'
-          }, {
-            type: 'info'
-          }, {
-            type: 'parking'
-          }, {
-            type: 'library'
-          }, {
-            type: 'info'
-          }, {
-            type: 'library'
-          }, {
-            type: 'parking'
-          }, {
-            type: 'info'
-          }, {
-            type: 'parking'
-          }, {
-            type: 'library'
-          }, {
-            type: 'info'
-          }, {
-            type: 'parking'
-          }, {
-            type: 'info'
-          }, {
-            type: 'info'
-          }, {
-            type: 'library'
-          }, {
-            type: 'info'
-          }, {
-            type: 'info'
-          }, {
-            type: 'library'
-          }, {
-            type: 'info'
-          }, {
-            type: 'library'
-          }, {
-            type: 'parking'
-          }, {
-            type: 'library'
-          }, {
-            type: 'parking'
-          }, {
-            type: 'parking'
-          }
-        ];
-        title: name,
-        icon: {
-            url: icons[features[index].type].icon,
-            scaledSize: new google.maps.Size(90, 90)
-        }
-
-
-
-    marker = new google.maps.Marker({
-        position: losAngeles,
-        map:map,
-        title:'Los Angeles'
-    });
-
-    marker.addListener('click', function() {
-        infoWindow.setContent(contentString);
-        infowindow.open(map, marker);
-    });
-*/
-
-
-window.onload = () =>{ // this a  shortcut declaration of function()
- 
+window.onload = () => {
+    const input = document.querySelector('#country-name-input');
+    input.addEventListener('input', searchCountry);
 }
-
 var map;
 var markers = [];
-.
 var infoWindow;
 
+async function initMap() {
+    //data's
+    let res = await axios.get('https://corona.lmao.ninja/countries'); //axios will return a promise data
+    DataForCovidCaces = res.data; //DataForCovidCases var is global declation
 
-function initMap(){
+    //var philippineIndex = DataForCovidCaces.findIndex(one => one['country'] == 'Philippines');
 
-    var AranetaCenterCubao= {
-        lat: 14.6194878, 
-        lng: 121.0511312
-    };
-
+    let philippine = { lat: 13, lng: 122}
     map = new google.maps.Map(document.getElementById('map'), {
-        center: AranetaCenterCubao,
-        zoom: 13,
-        mapTypeId:  'roadmap'
+        center: philippine,
+        zoom: 6,
+        mapTypeId: 'roadmap',
     });
 
-
+    google.maps.event.addListenerOnce(map, 'tilesloaded', function () {
+       
+    });
+    
     infoWindow = new google.maps.InfoWindow();
-     
-     searchStores();
-    //;
-    //setOnClickListener();
+    searchCountry();
 }
 
+function displayCountriesName(DataForCovidCaces){
+    let storesHtml = '';
 
+    for( var[index, country] of DataForCovidCaces.entries()){
+            var number = index+1
+             storesHtml += `
+            <div  class="store-container" >
+               
+                <div class="store-info-container">
+                    <div class="store-address">
+                        <span>${number}. ${country['country']}</span>
+                        <span></span>
+                    </div>
+                    <div class="store-phone-number">
+                        
+                    </div>
+                </div>
 
-
-function searchStores(){
-  var foundStores = [];
-  var zipCodeInput = document.getElementById('zip-code-input').value;
- if(zipCodeInput){
-     for(var store of stores){
-
-        var postal = store["address"]["postalCode"].substring(0,5);
-        var name = store["name"];
-
-        if(postal == zipCodeInput){
-              foundStores.push(store);
-        }else if(name == zipCodeInput){
-              foundStores.push(store);
-        }else{
-          var notFound = '';
-            notFound += `
-            <div class="not-found-store-container">
-              <h3>'Store's Not Found'</h3>
+                <div class="store-number-container">
+                    <div class="store-number">
+                    <img src="${country['countryInfo']['flag']}" width="20px" height="20px"/>
+                    </div>
+                </div>
             </div>
-            `
-            document.querySelector('.stores-list').innerHTML  = notFound;
+        `
+         document.querySelector('.stores-list').innerHTML = storesHtml; //combine this to store-list to show the data for loop
+        
+    }
+}
+
+function showCovidMarkers(newDataForCovidCaces) {
+   // var bounds = new google.maps.LatLngBounds();
+  for(var [index, dataCases] of DataForCovidCaces.entries()){
+        var latlng = new google.maps.LatLng(
+            dataCases['countryInfo']['lat'],
+            dataCases['countryInfo']['long']);
+
+        var lastUpdated = new Date(dataCases['updated']).toLocaleDateString("vn")
+        var country     = dataCases.country; //same format how call oject data 
+        var cases       = dataCases.cases;
+        var deaths      = dataCases['deaths']
+        var recovered   = dataCases['recovered']// this call using object literals use by arry bracket in js
+        var id          = dataCases['countryInfo']['_id'] // they almost d same declaration of calling it's droperty
+        var flagCountry = dataCases['countryInfo'].flag
+        var iso2        = dataCases['countryInfo']['iso2']
+        var todayCases  = dataCases['todayCases'];
+       // bounds.extend(latlng);
+        createCovidMarker(latlng, lastUpdated, country, cases, deaths, recovered,todayCases, id, iso2, flagCountry)
+    }
+//map.fitBounds(bounds);
+}
+
+function createCovidMarker(latlng, lastUpdated, country, cases, deaths, recovered, todayCases, id, iso2, flagCountry) {
+
+    let html = `
+        <div class="country-info-window">
+            <div class="flags-country"><img src="${flagCountry}"/></div>
+
+            <div class="country-info-name">${country}</div>
+
+            <div class="country-last-updated">
+                <span>last updated: </span>${lastUpdated}
+            </div>
+
+            <div class="data-info-total total">
+            <div class="circle icon-total"><i class="fas fa-head-side-mask"></i></div>
+                 Total Cases: ${cases}
+            </div>
+
+            <div class="data-info-today">
+            <div class="circle icon-today"><i class="fas fa-calendar-day"></i></div>
+                    Today Cases: ${todayCases}
+            </div>
+            <div class="data-info-recovered recovered">
+            <div class="circle"><i class="fas fa-ambulance"></i></div>
+                Recovered: ${recovered}
+            </div>
+            <div class="data-info-death death">
+                 <div class="circle"><i class="fas fa-dizzy"></i></div>
+                 Deaths: ${deaths}
+             </div>
+        </div>
+    `
+
+
+    var marker = new google.maps.Marker({
+        map: map,
+        position: latlng,
+        icon:{
+            url: 'image/corona1.png',
+            scaledSize: new google.maps.Size(80, 80)
+        } 
+    });
+    google.maps.event.addListener(marker, 'click', function () {
+        infoWindow.setContent(html);
+        infoWindow.open(map, marker);
+        
+
+    });
+    markers.push(marker); // this value is for global declaration its is inialize  avobe before the starting window.load
+}
+
+
+function searchCountry() {
+    let countryNammeInput = document.getElementById("country-name-input").value; // value from the use input form inputs form from html file
+                                                                                // also has a addListener above the window.load
+    console.log('Country Name Input: ' + countryNammeInput);
+
+    let oldIndex = []
+    let countriesResult = DataForCovidCaces.filter((one, index) => {
+
+        if (one['country'].toLowerCase().includes(countryNammeInput.toLowerCase())) {
+            oldIndex.push(index);
+            return true;
         }
-     }
-  }else{
-    foundStores = stores;
-  }
- clearLocation();
- displayStore(foundStores);
- showStoreMarkers(foundStores);
- setOnClickListener();
-}
-function clearLocation(){
-  infoWindow.close();
-  for(var i = 0; i < markers.length; i++){
-    markers[i].setMap(null);
-  }
-}
+    })
+    countriesResult.map((one, index) => {
+        one['index'] = oldIndex[index];
+    })
 
+    console.log(countriesResult); //to check id data is show
+    clearLocation();  // this for clear the marker in the map using the index markers 
+    displayCountriesName(countriesResult);
+    showCovidMarkers(countriesResult);
+    setOnClickListener(); // set in click when you click the data in box list will apper the data in the marker window Info's
+
+}
 function setOnClickListener(){
-
   var storeElements = document.querySelectorAll('.store-container');
-
     storeElements.forEach( function(elem, index){
     elem.addEventListener('click', function() {
        new google.maps.event.trigger(markers[index], 'click');
         })
     })
 }
-
-function displayStore(stores){
-
-    var storesHtml = '';
-    for(var [index, store] of stores.entries()){
-
-        var address = store["addressLines"];
-        var phoneNumber = store["phoneNumber"];
-
-        storesHtml += `
-            <div class="store-container">
-                  <div class="store-info-container">
-                    <div class="store-address">
-                        <span>${address[0]}</span>
-                        <span>${address[1]}</span>
-                    </div>
-                    <div class="store-phone-number">
-                            ${phoneNumber}
-                    </div>
-                  </div>
-                  <div class="store-number-container">
-                        <div class="store-number">
-                          ${index+1}
-                        </div>
-                  </div>
-            </div>`
-
-        document.querySelector('.stores-list').innerHTML = storesHtml;
-    }
-}
-
-
-function showStoreMarkers(stores){
-
-    var bounds = new google.maps.LatLngBounds();
-    for(var [index, store] of stores.entries()){
-
-        var latlng = new google.maps.LatLng(
-            store["coordinates"]["latitude"],
-            store["coordinates"]["longitude"]);
-
-        var name =store["name"];
-        var address =store["addressLines"][0];
-        var phoneNumber = store["phoneNumber"];
-        var untilOpen = store["openStatusText"];
-
-        bounds.extend(latlng);
-        createMarker(latlng, name, address, phoneNumber, untilOpen, index+1);
-    }
-    map.fitBounds(bounds);
-}
-
-function createMarker(latlng, name, address, phoneNumber, untilOpen, index){
-
-  var contentString = `
-      <div class="store-info-window">
-          <div class="store-info-name">
-              ${name}
-          </div>
-          <div class="store-info-status">
-              ${untilOpen}
-          </div>
-          <div class="store-info-address">
-            <div class="circle">
-                <i class="fas fa-location-arrow"></i>
-            </div>
-              ${address}
-          </div>
-          <div class="store-info-phone" >
-            <div class="circle">
-                <i class="fas fa-phone-alt"></i>
-            </div>
-             ${phoneNumber}
-          </div>
-      </div>`
-
-    var marker = new google.maps.Marker({
-        map: map,
-        position: latlng,
-        label: index.toString(),
-    });
-
-    google.maps.event.addListener(marker, 'click', () =>{
-      infoWindow.setContent(contentString);
-      infoWindow.open(map, marker);
-    });
-
-  markers.push(marker);
-}
-
-  /*
-
-  for(var [index, storeElement] of storeElements.entries()){
-    console.log(index);
-      storeElement.addEventListener('click', function(index){
-      new google.maps.event.trigger(marker[index], 'click');
-    })
+function clearLocation(){
+  infoWindow.close();
+  for(var i = 0; i < markers.length; i++){
+    markers[i].setMap(null);
   }
-  console.log(markers);
-*/
+  markers.length = 0
+}

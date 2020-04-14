@@ -2,52 +2,63 @@ SM Mall of Asia
 G/F Main Mall SM Central Business Park, SM Mall of Asia, 123 Seaside Blvd, Pasay, 1300 Metro Manila
 (02) 8556 0680
 9:00 PM
+14.535067
+120.982153
 
 Venice Grand Canal Mall
  Garden Villas, 1630 Upper McKinley Road McKinley Hill, Cluster B, Taguig, 1630 Metro Manila
 (02) 7624 1971
 11:00 PM
+14.5335413
+121.0511231
 
 Shangri-La Plaza
 Mandaluyong, Metro Manila
 (02) 8370 2500
 Open · Closes 10:00PM
+14.581167, 121.055056
 
 Fisher Mall
 Quezon Ave, Quezon City, Metro Manila
 (02) 8294 1560
 Open · Closes 10:00PM
+14.633667, 121.01925
 
 Festival Supermall Alabang
 Muntinlupa, Metro Manila
 (02) 8850 3517
+14.4157, 121.0389
 
-Divisoria Mall
+168 Shopping Divisoria Mall
 Manila, Metro Manila
 0907 261 9212
 Open · Closes 7:00PM
+14.604722, 120.972222
 
-Duty Free Philippines Fiestamall
-Parañaque, Metro Manila
-(02) 8552 4337
-Open · Closes 9:00PM
-
-SM Megamall
-Mandaluyong, Metro Manila
-(02) 8633 1769
-Open · Closes 9:00PM
-
-SM Supermalls
-SM Corporate Office Building D
-Pasay, Metro Manila
-(02) 8831 8000
-
-SM City Manila
-Manila, Metro Manila
-(02) 8523 7044
-Open · Closes 9:00PM
 
 SM Valenzuela
-SM City Valenzuela
+MacArthur Highway, Karuhatan Valenzuela, Metro Manila, Philippines
 (02) 8293 1877
 Open · Closes 9:00PM
+14.7331,121.0162
+
+alabang town center alabang -
+zapote road, muntinlupa city,philippines
+11:00AM–9:00PM
+14.4237,121.0295
+
+
+Fairview Terraces
+Quirino Highway corner Maligaya Drive, Novaliches, Quezon City
+(02) 956 3888
+11:00AM–10:00PM
+14.676,121.0437
+
+
+Glorietta
+makati city, metro manila, philippines
+(02) 7795 9595
+10:00AM–10:00PM
+14.5515,121.0253
+
+

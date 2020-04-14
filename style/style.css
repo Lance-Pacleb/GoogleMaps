@@ -5,29 +5,33 @@ body {
     padding: 0;
 }
 #map {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%
 }
 .title {
     position: absolute;
     z-index: 100;
-    font-size: 88px;
+    font-size: 52px;
     font-weight: bold;
     color: black;
+    transition: color 0.2s ease;
     text-transform: uppercase;
-    top: 100px;
-    left: 100px;
+    top: 40px;
+    left: 80px;
 }
 .search-container {
-    border-radius: 30px;
     position: absolute;
     z-index: 100;
-    top: 230px;
-    left: 100px;
-    width: 460px;
+    top: 130px;
+    left: 80px;
+    width: 400px;
     height: 60px;
-    background-color:orange ;
+    background-color: rgb(88, 78, 84, 0.9);
+    transition: color 0.2s ease;
+    border-radius: 44px;
     display: flex;
+}
+.search-container:hover {
+    background-color: rgb(88, 78, 84, 1);
 }
 .search-container .search {
     flex-grow: 1;
@@ -41,7 +45,9 @@ body {
     font-size: 25px;
     background-color: transparent;
     border: none;
+    border-radius: 10px
     color: white;
+    height: 50px;
 }
 .search-container input:focus {
     outline: none;
@@ -49,106 +55,187 @@ body {
 .search i {
     font-size: 25px;
     color: white;
-}
+} 
 .stores-list-container {
-    width: 460px;
+    width: 400px;
     position: absolute;
     z-index: 100;
-    background: #181818ad;
-    left: 100px;
-    top: 320px;
-    border-radius: 30px;
+    background-color:#181818eb;
+    top: 220px;
+    left: 80px;
+    border-radius: 44px;
     bottom: 20px;
-    letter-spacing: 3.1px;
     display: flex;
     overflow-y: hidden;
     padding-bottom: 20px;
 }
-.store-container{
-    border-bottom: 3px solid orange;
-    display: flex;
-}
-.stores-list{
-    overflow-y: scroll;
-    padding-right: 20px;
-    padding-left: 20px;
-}
-.store-container:hover{
-    background-color: #454e53;
-    border-radius: 20px;
-}
-.store-address{
-    font-size: 21px;
-    margin: 30px 30px 0px 0px;
-    color: white;
-}
-.store-address span{
-    display: block;
-    font-size: 21px;
-}
-.store-phone-number{
-    margin: 15px 0px 0px 0px;
-    font-size: 19px;
-    color: white;
-}
-.store-number-container{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-.store-number{
-    width: 30px;
-    height: 30px;
-    display: flex;
-    font-size: 20px;
-    border-radius: 50%;
-    background: #ffffffd1;
-    font-weight: bold;
-    align-items: center;
-    justify-content: center;
-}
-.store-info-container{
+.stores-list-container .stores-list {
+    padding-left: 10px;
+    padding-right: 10px;
     flex-grow: 1;
+    overflow-y: scroll;
 }
-.store-info-window{
+.stores-list::-webkit-scrollbar {
+    width: 0px;
+}
+.stores-list:hover::-webkit-scrollbar {
+    width: 12px;
+}
+.store-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom:  2px solid #ff7600;
+    display: flex;
+    transition: 0.2s;
+}
+.store-container:hover {
+    background-color: #f87d00;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.store-container:hover .store-phone-number {
+    color: white !important;
+}
+
+.store-container:hover .store-number {
+    background-color: white;
+    color: rgb(170, 95, 47);
+}
+
+.store-container .store-info-container {
+    flex-grow: 1;   
+}
+
+.store-container .store-address {
+    font-size: 20px;
+    margin-top: 30px;
+}
+.store-container .store-phone-number {
+    font-size: 16px;
+    color: #B5ADAD;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.store-address span {
+    font-weight: bold;
+    color: white;
+    display: block;
+}
+
+.store-number-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.store-number {
+    width: 33px;
+    height: 33px;
+    background-color: white;
+    color:white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-store-name {
+    margin: 0px;
+}
+
+.window-basic-container {
+    border-bottom: 1px solid rgb(194, 194, 194);
+    transition: 0.2s;
+}
+.search {
+    cursor: pointer;
+}
+.country-info-window{
     min-width: 300px;
     font-size: 18px;
     padding: 8px;
 }
-.store-info-name{
+.country-info-name{
     font-size: 24px;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
     color: rgb(0, 0, 0);
+    text-transform: uppercase;
 }
-.store-info-status{
+.country-last-updated{
     margin-top: 6px;
-    border-bottom: 2px solid orange;
+    border-top: 3px solid orange;
     padding-bottom: 6px;
+    display: flex;
+    justify-content: center;
+    color: red;
+    font-style: italic;
 }
-.store-info-address, .store-info-phone{
+.data-info-total, .data-info-today, .data-info-recovered, .data-info-death{
     margin-top: 8px;
     display: flex;
     align-items: center;
 }
-.store-info-address .circle, .store-info-phone .circle{
+.data-info-total .circle, .data-info-today .circle, .data-info-death .circle ,.data-info-recovered .circle{
     width: 30px;
     height: 30px;
-    background-color:orange;
-    color:white;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
     display: flex;
     margin-right: 8px;
 }
-.not-found-store-container{
+.total{
+    font-weight: bold;
+    letter-spacing: 2.1px;
+    text-transform: uppercase;
+    color: red;
+}
+.info-cases {
+    color: #E9530D;
+}
+.recovered {
+    color: #3094B1;
+}
+.death {
+    color : #A32F2E;
+}
+.icon-total, .icon-today{
+    background-color:red;
+    color:white;
+}
+.flags-country {
     display: flex;
-    width: 400px;
-    height: 34em;
-    border-radius: 50px;
     justify-content: center;
     align-items: center;
-    color: red;
-    overflow-y: none;
-    margin-top: 15px;
+}
+.flags-country img{
+    display: flex;
+    width: auto;
+    border:2px solid black;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,0,0,0.4); 
 }
